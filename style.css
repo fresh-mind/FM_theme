@@ -1,0 +1,643 @@
+@charset "utf-8";
+
+/*
+Theme Name: freshmind
+Theme URI: https://wordpress.org/themes/twentyfifteen/
+Author: Fresh Mind
+Author URI: https://wordpress.org/
+Description: freshmind theme
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, blue, gray, pink, purple, white, yellow, dark, light, two-columns, left-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Text Domain: freshmind
+
+*/
+
+body {
+	font: 16px 'Open Sans', sans-serif;
+	line-height: 1.5;
+	color: #666;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #333;
+}
+a {
+	color: #45BF55;
+	transition: all 0.5s;
+}
+a:hover {
+	opacity: 0.8;
+	color: #45BF55;
+}
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+/* ========================== HEADER ============================= */
+
+#header {
+	padding: 15px 0;
+	text-align: center;
+}
+.site-description {
+	margin: 15px 0 0;
+}
+.header-contacts {
+	margin: 15px 0 0;
+	text-align: center;
+}
+.header-contacts-item {
+	white-space: nowrap;
+}
+#logo {
+    text-transform: uppercase;
+    font-size: 33px;
+    text-align: left;
+}
+#logo img {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+	
+/* ========================== /HEADER ============================ */
+
+/* ========================== NAVBAR ============================= */
+
+.navbar-wrapper.to_top {
+	top: 0;
+	width: 100%;
+	z-index: 100;
+	position: fixed;
+	opacity: 0.9;
+	transition: all 0.5s;
+}
+.navbar {
+	margin-bottom: 0;
+}
+.navbar-inverse .navbar-brand {
+	display: none;
+	color: #fff;
+}
+.navbar-wrapper.to_top .navbar-brand {
+	display: block;
+}
+
+.navbar-inverse {
+	border-radius: 0;
+	background: #45BF55;
+	border: none;
+}
+.navbar-inverse .navbar-toggle {
+	border-radius: 0;
+	border: none;
+}
+.navbar-inverse .navbar-toggle:hover, 
+.navbar-inverse .navbar-toggle:focus {
+	background-color: #044c29;
+}
+.navbar-inverse .navbar-nav > li > a {
+	color: #fff;
+}
+.navbar-inverse .navbar-nav > li.current-menu-item > a {
+	background-color: #044c29;
+}
+.navbar-inverse .navbar-nav > li > a:hover {
+	background: #96ED89;
+}
+.navbar-inverse .navbar-nav > .open > a, 
+.navbar-inverse .navbar-nav > .open > a:hover, 
+.navbar-inverse .navbar-nav > .open > a:focus {
+	background-color: #044C29;
+}
+.dropdown-menu {
+	border-radius: 0;
+	box-shadow: 0;
+}
+@media screen and (min-width: 992px) {
+  .navbar-toggle-hover .dropdown:hover > .dropdown-menu {
+		display: block;
+  }
+}
+
+/* ========================== /NAVBAR ============================ */
+
+/* ========================== SLIDER PRO ========================= */
+
+.slider-pro {
+	overflow: hidden;
+	margin-bottom: 2em !important;
+}
+.slider-pro p.sp-layer {
+	font-size: 30px !important;
+}
+
+/* ========================== CONTENT ============================ */
+
+	#content {
+		margin-bottom: 2.5em;
+	}
+	#content h2 {
+		margin-top: 0;
+	}
+	#content h3 {
+		margin-bottom: 1em;
+	}
+	#content h3:after {
+		display: block;
+		content: '';
+		width: 100px;
+		height: 1px;
+		font-size: 0;
+		background: #ddd;
+		margin-top: 8px;
+	}
+
+	/* __________________ Main title ________________________ */
+	
+	.page-title {
+		padding-bottom: 25px;
+		border-bottom: 1px solid #eee;
+		margin-bottom: 25px;
+	}
+	
+	/* __________________ Posts loop ________________________ */
+	
+	.posts_loop .post {
+		margin-bottom: 1.5em;
+	}
+	.post header {
+		margin-bottom: 1em;
+	}
+	.post_content p {
+		line-height: 1.8;
+	}
+	.post footer {
+		padding-top: 10px;
+		border-top: 1px solid #eee; 
+		color: #999;
+		font-size: 90%;
+	}
+	.more-link:before {
+		content: "";
+		display: block;
+	}
+
+	/* __________________ Post ______________________________ */
+	
+	.wp-post-image {
+		/*max-width: 1900px;
+		width: 100%;
+		height: auto;*/
+	}
+	.meta {
+		/*text-align: right;*/
+		color: #999;
+		font-size: 90%;
+	}
+	
+	/* __________________ 404 _______________________________ */
+	
+	.error_404 {
+		text-align: center;
+		font-size: 25px;
+	}
+	.error_404 strong {
+		font-size: 95px;
+		margin: 0.5em 0;
+		display: block;
+		text-align: center;
+		color: #ccc;
+	}
+	
+	/* _________________ Pagination ________________________ */
+	
+	.pagination > li > a, 
+	.pagination > li > span {
+		margin-left: 5px;
+		color: #45bf55;
+		border-radius: 5px;
+		padding: 3px 12px;
+		border: none !important;
+	}
+	.pagination > li > a:hover, 
+	.pagination > li > span:hover {
+		color: #45bf55;
+	}
+	.pagination > .active > a, 
+	.pagination > .active > span, 
+	.pagination > .active > a:hover, 
+	.pagination > .active > span:hover, 
+	.pagination > .active > a:focus, 
+	.pagination > .active > span:focus {
+		background-color: #45bf55;
+		/*border-color: #45bf55;*/
+	}
+	
+	/* _________________ Comments ___________________________ */
+	
+	ol.commentlist {
+		counter-reset: myCounter;
+		padding: 0;
+	}
+	ol.commentlist li {
+		list-style: none;
+		display: block;
+		position: relative;
+		padding-left: 15px;
+	}
+	ol.commentlist li:before {
+  		counter-increment: myCounter;
+  		content:counter(myCounter);
+  		color: #ddd;
+  		display: inline-block;
+  		position: absolute;
+  		left: 0; top: 0;
+	}
+	.comment-text {
+		border-left: 1px solid #eee;
+	}
+	.comment-author {
+		margin-bottom: 1.5em;
+	}
+	.comment-author footer {
+		font-size: 90%;
+	}
+	.comment-author footer .fa {
+		color: #ddd;
+	}
+	
+	/* _________________ Sidebar ___________________________ */
+	
+	.sidebar h2 {
+		font-size: 22px;
+	}
+	.sidebar ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		font-size: 14px;
+	}
+	.sidebar ul li {
+		position: relative;
+		margin-bottom: 0.7em;
+	}
+	.sidebar ul li:before {
+		/*content: "\f111";
+		font-family: 'FontAwesome';
+		display: inline-block;
+		vertical-align: middle;
+		color: #eee;
+		width: 25px;	
+		font-size: 8px;
+		position: absolute;
+		left: -25px; top: 5px;*/
+	}
+	.sidebar .widget {
+		position: relative;
+		margin-left: 25px;
+		border-left: 1px solid #eee;
+		padding-left: 10px;
+		margin-bottom: 1.5em;
+	}
+	.sidebar .widget:before {
+		content: "\f141";
+		font-family: 'FontAwesome';
+		display: inline-block;
+		vertical-align: middle;
+		color: #ddd;
+		width: 25px;	
+		font-size: 19px;
+		position: absolute;
+		left: -25px; top: 0;
+	}
+	.sidebar .widget_search {
+		margin-left: 0;
+		padding-left: 0;
+		border: none;
+	}
+	.sidebar .widget_search:before {
+		content: "";
+	}
+	.sidebar .widget_recent_entries:before {
+		content: "\f15c";
+	}
+	.sidebar .widget_recent_comments:before {
+		content: "\f086";
+	}
+	.sidebar .widget_archive:before {
+		content: "\f1c6";
+	}
+	.sidebar .widget_categories:before {
+		content: "\f03a";
+	}
+	
+	
+/* ========================= /CONTENT ============================ */
+
+/* ========================== FORMS ============================== */	
+
+.form-control-wrap {
+	position: relative;
+}
+.form-control-wrap .form-control {
+	padding-left: 40px;
+}
+.form-control-wrap:before {
+	content: "";
+	font-family: FontAwesome;
+	font-family: 17px;
+	color: #ddd;
+	display: inline-block;
+	vertical-align: middle;
+	position: absolute;
+	left: 10px; top: 0px;
+	width: 24px;
+	/*height: 32px;*/
+	height: 100%;
+	padding-top: 3px;
+	text-align: left;
+	border-right: 1px solid #ddd;
+}
+.form-control-wrap-name:before { /* fa-user */
+	content: "\f007";
+}
+.form-control-wrap-email:before { /* fa-envelope */
+	content: "\f0e0";
+}
+.form-control-wrap-phone:before { /* fa-phone-square */
+	content: "\f098";
+	font-size: 19px;
+}
+.form-control-wrap-url:before { /* fa-globe */
+	content: "\f0ac";
+}
+.form-control-wrap-comment:before { /* fa-comment */
+	content: "\f075";
+}
+.form-actions {
+	border-top: 1px solid #ddd;
+	padding-top: 1em;
+}
+
+.btn {
+	transition: background-color 0.3s ease 0s, transform 0.3s ease 0s, opacity 0.3s ease 0s;
+}
+.btn-submit {
+	background-color: #45bf55;
+	color: #fff;
+}
+.btn-submit:hover {
+	opacity: 0.8;
+	color: #fff;
+}
+
+/* ========================== /FORMS ============================= */	
+
+/* ========================== FOOTER  ============================ */
+
+#footer {
+	background: #eee;
+	font-size: 90%;
+}
+#footer-bar {
+	padding: 20px 0;
+}
+#footer h4 {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 1em;
+}
+#footer .site-info {
+	padding: 10px 0 6px;
+	background: #ccc;
+	color: #fff;
+}
+
+.contact-info {
+	position: relative;
+	margin-left: 25px;
+	/*border-left: 1px solid #ddd;*/
+	padding-left: 10px;
+}
+.contact-info-item {
+	position: relative;
+	margin-bottom: 0.5em;
+}
+.contact-info-item .fa {
+	content: "\f141";
+	font-family: 'FontAwesome';
+	display: inline-block;
+	vertical-align: middle;
+	color: #ddd;
+	width: 25px;	
+	font-size: 19px;
+	position: absolute;
+	left: -45px; top: 3px;
+	text-align: right;
+}
+
+#footer-bar ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+#footer-bar ul li {
+	margin-bottom: 1em;
+}
+
+#footer-bar .col {
+	margin-bottom: 1.5em;
+} 
+	  
+/* ========================== /FOOTER  =========================== */
+
+.scrollup {
+    border-radius: 50%;
+    bottom: 50px;
+    cursor: pointer;
+    display: none;
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    right: 20px;
+    transition: all 500ms ease-out 0s;
+    z-index: 1;
+    background-color: #45bf55;
+    opacity: 0.3;
+    line-height: 85px;
+    text-align: center;
+}
+.scrollup:hover {
+	opacity: 0.6;
+}
+.scrollup i {
+    color: #fff;
+    font-size: 48px;
+}
+
+#wp-calendar caption {
+	margin-bottom: 5px;
+}
+#wp-calendar td, #wp-calendar th {
+	padding: 7px 8px;
+	background: #fff;
+	border: 1px solid #eee;
+}
+	
+/* = WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+.gallery-caption { 
+	font-size:1em; 
+}
+.bypostauthor{ 
+	font-size:1em; 
+}
+.sticky {
+	font-size: 1em;
+}
+/* ========================================= /WP Core required styles =============== */
+
+
+
+/* ========================== Modals ============================= */
+.close {
+	/*font-weight: 200;
+	font-size: 3em;
+	margin: -5px -15px 0 0;
+	opacity: 0.7;*/
+}
+.close {
+	text-indent: -10000px;
+	margin: -5px -15px 0 0;
+	width: 25px;
+	height: 25px;
+	background: url(images/close.svg) 0 0 no-repeat !important;	
+	background-size: 100% 100% !important;
+	opacity: 0.9;
+}
+.modal-content {
+	background: transparent;
+	border-radius: 0;
+	box-shadow: none;
+	border: none;
+}
+.modal-body {
+	background: #fff;
+}
+.modal-header {
+	text-align: center;
+	color: #fff;
+}
+.modal-title {
+	color: #fff;
+}
+.modal-noborder .modal-body {
+	padding: 0 !important;
+}
+.modal-backdrop.in {
+	opacity: 0.65;
+}
